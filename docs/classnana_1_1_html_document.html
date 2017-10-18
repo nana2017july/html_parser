@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HtmlParser: nana::HtmlDocument クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HtmlParser
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="classnana_1_1_html_document.html">HtmlDocument</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classnana_1_1_html_document-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">nana::HtmlDocument クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="html__element_8hpp_source.html">html_element.hpp</a>&gt;</code></p>
+<div class="dynheader">
+nana::HtmlDocument の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnana_1_1_html_document.png" usemap="#nana::HtmlDocument_map" alt=""/>
+  <map id="nana::HtmlDocument_map" name="nana::HtmlDocument_map">
+<area href="classnana_1_1noncopyable.html" title="コピーさせないために " alt="nana::noncopyable" shape="rect" coords="0,0,126,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a91abdd80a1c22e5e5f0130f8130200e4"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; unique_ptr&lt; <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">HtmlPartUptrs</a></td></tr>
+<tr class="separator:a91abdd80a1c22e5e5f0130f8130200e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2d6a12d5c75dddc348e3dea33375c7"><td class="memItemLeft" align="right" valign="top">typedef HtmlPartUptrs::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">const_iterator</a></td></tr>
+<tr class="separator:aec2d6a12d5c75dddc348e3dea33375c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7090e7b84565b0a16a7ecdcb94e60b9d"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#a7090e7b84565b0a16a7ecdcb94e60b9d">SearchResults</a></td></tr>
+<tr class="separator:a7090e7b84565b0a16a7ecdcb94e60b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f848f7f5d16ee0f826a62cddb664e4"><td class="memItemLeft" align="right" valign="top">typedef unique_ptr&lt; <a class="el" href="classnana_1_1_html_document.html#a7090e7b84565b0a16a7ecdcb94e60b9d">SearchResults</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#a60f848f7f5d16ee0f826a62cddb664e4">SearchResultsUptr</a></td></tr>
+<tr class="separator:a60f848f7f5d16ee0f826a62cddb664e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ada324a52428c456eaadf411e3630e5f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#ada324a52428c456eaadf411e3630e5f7">HtmlDocument</a> (unique_ptr&lt; <a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">HtmlPartUptrs</a> &gt; &amp;&amp;p_partUptr, unique_ptr&lt; <a class="el" href="classnana_1_1_html_node.html">HtmlNode</a> &gt; &amp;&amp;p_rootNode)</td></tr>
+<tr class="separator:ada324a52428c456eaadf411e3630e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dad592e06c43f7710a8e5652fa0e512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#a9dad592e06c43f7710a8e5652fa0e512">begin</a> () const</td></tr>
+<tr class="memdesc:a9dad592e06c43f7710a8e5652fa0e512"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnana_1_1_html_document.html#af098bf8c2390a1f51831b2d705e294b0" title="HTMLのタグのリスト全て ">htmlPartList()</a> のイテレータ( unique_ptr&lt;HtmlPart&gt; )  <a href="#a9dad592e06c43f7710a8e5652fa0e512">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dad592e06c43f7710a8e5652fa0e512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5624c1a2f580bd43b4d3a2676334175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#aa5624c1a2f580bd43b4d3a2676334175">end</a> () const</td></tr>
+<tr class="separator:aa5624c1a2f580bd43b4d3a2676334175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af098bf8c2390a1f51831b2d705e294b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">HtmlPartUptrs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#af098bf8c2390a1f51831b2d705e294b0">htmlPartList</a> () const</td></tr>
+<tr class="memdesc:af098bf8c2390a1f51831b2d705e294b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTMLのタグのリスト全て  <a href="#af098bf8c2390a1f51831b2d705e294b0">[詳解]</a><br /></td></tr>
+<tr class="separator:af098bf8c2390a1f51831b2d705e294b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad568d70ee5f8a3ae53ef946eb25e298c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnana_1_1_html_node.html">HtmlNode</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#ad568d70ee5f8a3ae53ef946eb25e298c">rootNode</a> () const</td></tr>
+<tr class="memdesc:ad568d70ee5f8a3ae53ef946eb25e298c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートノード  <a href="#ad568d70ee5f8a3ae53ef946eb25e298c">[詳解]</a><br /></td></tr>
+<tr class="separator:ad568d70ee5f8a3ae53ef946eb25e298c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5990fe35d4a5c82659b2d6ff745c58fb"><td class="memItemLeft" align="right" valign="top">const HtmlPartUptrs::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#a5990fe35d4a5c82659b2d6ff745c58fb">size</a> () const</td></tr>
+<tr class="memdesc:a5990fe35d4a5c82659b2d6ff745c58fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の数  <a href="#a5990fe35d4a5c82659b2d6ff745c58fb">[詳解]</a><br /></td></tr>
+<tr class="separator:a5990fe35d4a5c82659b2d6ff745c58fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae736185857a114a65233b0f276d3fb34"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#ae736185857a114a65233b0f276d3fb34">at</a> (const int p_index) const</td></tr>
+<tr class="memdesc:ae736185857a114a65233b0f276d3fb34"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を指定してタグを取得する(見つからない場合nullptr)  <a href="#ae736185857a114a65233b0f276d3fb34">[詳解]</a><br /></td></tr>
+<tr class="separator:ae736185857a114a65233b0f276d3fb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42316d017f376a2a191fe4bf6458304"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnana_1_1_html_document.html#a60f848f7f5d16ee0f826a62cddb664e4">SearchResultsUptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_document.html#ab42316d017f376a2a191fe4bf6458304">range</a> (const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> *p_start, const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> *p_end) const</td></tr>
+<tr class="separator:ab42316d017f376a2a191fe4bf6458304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><pre>
+タグの解析をした結果を保存するクラス。
+解析は以下のことしか行わない。それ以上の解析は他のクラスや関数で行う。
+・コメント（＜！&ndash;）
+・declaration（＜！doctype、＜？）
+・タグ（＜yyy ＞＜/xxx＞＜zzz/＞それぞれ別々に扱う）
+・テキスト（上記以外のもの）
+</pre> </div><h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="aec2d6a12d5c75dddc348e3dea33375c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2d6a12d5c75dddc348e3dea33375c7">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef HtmlPartUptrs::const_iterator <a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">nana::HtmlDocument::const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91abdd80a1c22e5e5f0130f8130200e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91abdd80a1c22e5e5f0130f8130200e4">&#9670;&nbsp;</a></span>HtmlPartUptrs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;unique_ptr&lt;<a class="el" href="classnana_1_1_html_part.html">HtmlPart</a>&gt; &gt; <a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">nana::HtmlDocument::HtmlPartUptrs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7090e7b84565b0a16a7ecdcb94e60b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7090e7b84565b0a16a7ecdcb94e60b9d">&#9670;&nbsp;</a></span>SearchResults</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef vector&lt;const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a>*&gt; <a class="el" href="classnana_1_1_html_document.html#a7090e7b84565b0a16a7ecdcb94e60b9d">nana::HtmlDocument::SearchResults</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f848f7f5d16ee0f826a62cddb664e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f848f7f5d16ee0f826a62cddb664e4">&#9670;&nbsp;</a></span>SearchResultsUptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unique_ptr&lt;<a class="el" href="classnana_1_1_html_document.html#a7090e7b84565b0a16a7ecdcb94e60b9d">SearchResults</a>&gt; <a class="el" href="classnana_1_1_html_document.html#a60f848f7f5d16ee0f826a62cddb664e4">nana::HtmlDocument::SearchResultsUptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ada324a52428c456eaadf411e3630e5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada324a52428c456eaadf411e3630e5f7">&#9670;&nbsp;</a></span>HtmlDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nana::HtmlDocument::HtmlDocument </td>
+          <td>(</td>
+          <td class="paramtype">unique_ptr&lt; <a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">HtmlPartUptrs</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>p_partUptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unique_ptr&lt; <a class="el" href="classnana_1_1_html_node.html">HtmlNode</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>p_rootNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae736185857a114a65233b0f276d3fb34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae736185857a114a65233b0f276d3fb34">&#9670;&nbsp;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a>* nana::HtmlDocument::at </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>p_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>位置を指定してタグを取得する(見つからない場合nullptr) </p>
+
+</div>
+</div>
+<a id="a9dad592e06c43f7710a8e5652fa0e512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dad592e06c43f7710a8e5652fa0e512">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">const_iterator</a> nana::HtmlDocument::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classnana_1_1_html_document.html#af098bf8c2390a1f51831b2d705e294b0" title="HTMLのタグのリスト全て ">htmlPartList()</a> のイテレータ( unique_ptr&lt;HtmlPart&gt; ) </p>
+
+</div>
+</div>
+<a id="aa5624c1a2f580bd43b4d3a2676334175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5624c1a2f580bd43b4d3a2676334175">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnana_1_1_html_document.html#aec2d6a12d5c75dddc348e3dea33375c7">const_iterator</a> nana::HtmlDocument::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af098bf8c2390a1f51831b2d705e294b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af098bf8c2390a1f51831b2d705e294b0">&#9670;&nbsp;</a></span>htmlPartList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnana_1_1_html_document.html#a91abdd80a1c22e5e5f0130f8130200e4">HtmlPartUptrs</a>&amp; nana::HtmlDocument::htmlPartList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTMLのタグのリスト全て </p>
+
+</div>
+</div>
+<a id="ab42316d017f376a2a191fe4bf6458304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42316d017f376a2a191fe4bf6458304">&#9670;&nbsp;</a></span>range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnana_1_1_html_document.html#a60f848f7f5d16ee0f826a62cddb664e4">HtmlDocument::SearchResultsUptr</a> nana::HtmlDocument::range </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> *&#160;</td>
+          <td class="paramname"><em>p_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnana_1_1_html_part.html">HtmlPart</a> *&#160;</td>
+          <td class="paramname"><em>p_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定のタグを範囲検索する(start ＜ endでないといけない) </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>[in]範囲の開始。このポインタと同じポインタを開始位置とする。 </td></tr>
+    <tr><td class="paramname">end</td><td>[in]範囲の終了。このポインタと同じポインタを終了位置とする。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>指定の範囲のパーツを返す。存在しない場合、サイズ0のオブジェクトを返す </dd></dl>
+
+</div>
+</div>
+<a id="ad568d70ee5f8a3ae53ef946eb25e298c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad568d70ee5f8a3ae53ef946eb25e298c">&#9670;&nbsp;</a></span>rootNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnana_1_1_html_node.html">HtmlNode</a>&amp; nana::HtmlDocument::rootNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ルートノード </p>
+
+</div>
+</div>
+<a id="a5990fe35d4a5c82659b2d6ff745c58fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5990fe35d4a5c82659b2d6ff745c58fb">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const HtmlPartUptrs::size_type nana::HtmlDocument::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素の数 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="html__element_8hpp_source.html">html_element.hpp</a></li>
+<li><a class="el" href="html__element_8cpp.html">html_element.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

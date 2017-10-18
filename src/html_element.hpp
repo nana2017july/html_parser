@@ -189,6 +189,7 @@ std::ostream& operator << (std::ostream& os, const HtmlNode& htmlNode);
 */
 class HtmlDocument: noncopyable{
 public:
+<<<<<<< HEAD
 	typedef std::vector<unique_ptr<HtmlPart> > HtmlPartsUptrs;
 	typedef HtmlPartsUptrs::const_iterator const_iterator;
 	typedef vector<const HtmlPart*> SearchResults;
@@ -202,14 +203,36 @@ public:
 
 	///HTMLのタグのリスト全て
 	const HtmlPartsUptrs& htmlPartsList()const{ return *m_stockedPartsUptrsUptr; };
+=======
+	typedef std::vector<unique_ptr<HtmlPart> > HtmlPartUptrs;
+	typedef HtmlPartUptrs::const_iterator const_iterator;
+	typedef vector<const HtmlPart*> SearchResults;
+	typedef unique_ptr<SearchResults> SearchResultsUptr;
+	//
+	HtmlDocument(unique_ptr<HtmlPartUptrs>&& p_partUptr, unique_ptr<HtmlNode>&& p_rootNode)
+	: m_stockedPartUptrsUptr(move(p_partUptr)), m_rootNodeUptr(move(p_rootNode)) {};
+	///htmlPartList() のイテレータ( unique_ptr<HtmlPart> )
+	const_iterator begin() const{ return m_stockedPartUptrsUptr->begin(); };
+	const_iterator end() const{ return m_stockedPartUptrsUptr->end(); };
+
+	///HTMLのタグのリスト全て
+	const HtmlPartUptrs& htmlPartList()const{ return *m_stockedPartUptrsUptr; };
+>>>>>>> d257b57... ver.2.2
 	///ルートノード
 	const HtmlNode& rootNode()const{ return *m_rootNodeUptr; };
 	
 	///要素の数
+<<<<<<< HEAD
 	const HtmlPartsUptrs::size_type size()const{ return m_stockedPartsUptrsUptr->size(); };
 	///位置を指定してタグを取得する(見つからない場合nullptr)
 	const HtmlPart* at(const int p_index)const{
 		if(p_index < m_stockedPartsUptrsUptr->size()) return (*m_stockedPartsUptrsUptr)[p_index].get();
+=======
+	const HtmlPartUptrs::size_type size()const{ return m_stockedPartUptrsUptr->size(); };
+	///位置を指定してタグを取得する(見つからない場合nullptr)
+	const HtmlPart* at(const int p_index)const{
+		if(p_index < m_stockedPartUptrsUptr->size()) return (*m_stockedPartUptrsUptr)[p_index].get();
+>>>>>>> d257b57... ver.2.2
 		return nullptr;
 	};
 	/**指定のタグを範囲検索する(start ＜ endでないといけない)
@@ -220,17 +243,30 @@ public:
 	SearchResultsUptr range(
 		const HtmlPart* p_start, const HtmlPart* p_end)const;
 private:
+<<<<<<< HEAD
 	unique_ptr<HtmlPartsUptrs> m_stockedPartsUptrsUptr;
+=======
+	unique_ptr<HtmlPartUptrs> m_stockedPartUptrsUptr;
+>>>>>>> d257b57... ver.2.2
 	unique_ptr<HtmlNode> m_rootNodeUptr;
 };
 
 
+<<<<<<< HEAD
 class TagHtmlParts : public HtmlPart {
 public:
 	typedef std::map<std::string, vector<string> > AttrMap;
 	TagHtmlParts(const string& p_str, const long p_line, const long p_pos)
 		:HtmlPart(p_str, p_line, p_pos){ parseTag(); };
 	virtual ~TagHtmlParts(){};
+=======
+class TagHtmlPart : public HtmlPart {
+public:
+	typedef std::map<std::string, vector<string> > AttrMap;
+	TagHtmlPart(const string& p_str, const long p_line, const long p_pos)
+		:HtmlPart(p_str, p_line, p_pos){ parseTag(); };
+	virtual ~TagHtmlPart(){};
+>>>>>>> d257b57... ver.2.2
 	virtual const HtmlPart::Type type() const{ return TAG; };
 	virtual const string& tagName()const{ return m_tagName; };
 	virtual const std::string& attr(const std::string& p_key, const int p_index)const;
@@ -246,32 +282,56 @@ private:
 
 
 
+<<<<<<< HEAD
 class TextHtmlParts : public HtmlPart {
 public:
 	TextHtmlParts(const string& p_str, const long p_line, const long p_pos)
+=======
+class TextHtmlPart : public HtmlPart {
+public:
+	TextHtmlPart(const string& p_str, const long p_line, const long p_pos)
+>>>>>>> d257b57... ver.2.2
 		:HtmlPart(p_str, p_line, p_pos){};
 	virtual const HtmlPart::Type type() const{ return TEXT; };
 };
 
+<<<<<<< HEAD
 class CommentHtmlParts : public HtmlPart {
 public:
 	CommentHtmlParts(const std::string& p_str, const long p_line, const long p_pos)
+=======
+class CommentHtmlPart : public HtmlPart {
+public:
+	CommentHtmlPart(const std::string& p_str, const long p_line, const long p_pos)
+>>>>>>> d257b57... ver.2.2
 		:HtmlPart(p_str, p_line, p_pos){};
 	virtual const HtmlPart::Type type() const{ return COMMENT; };
 };
 
 ///doctypeや?xmlなどを表す。
+<<<<<<< HEAD
 class DeclarationHtmlParts : public HtmlPart {
 public:
 	DeclarationHtmlParts(const std::string& p_str, const long p_line, const long p_pos)
+=======
+class DeclarationHtmlPart : public HtmlPart {
+public:
+	DeclarationHtmlPart(const std::string& p_str, const long p_line, const long p_pos)
+>>>>>>> d257b57... ver.2.2
 		:HtmlPart(p_str, p_line, p_pos){};
 	virtual const HtmlPart::Type type() const{ return DECLARATION; };
 };
 
 ///タグの終了（＞）が見つからない要素を表す 
+<<<<<<< HEAD
 class NotEndHtmlParts : public HtmlPart {
 public:
 	NotEndHtmlParts(const std::string& p_str, const long p_line, const long p_pos)
+=======
+class NotEndHtmlPart : public HtmlPart {
+public:
+	NotEndHtmlPart(const std::string& p_str, const long p_line, const long p_pos)
+>>>>>>> d257b57... ver.2.2
 		:HtmlPart(p_str, p_line, p_pos){};
 	virtual const HtmlPart::Type type() const{ return NOT_END; };
 };
@@ -305,14 +365,22 @@ public:
 	SimpleHtmlSaxParserHandler(){};
 	virtual ~SimpleHtmlSaxParserHandler(){};
 	virtual void start(){
+<<<<<<< HEAD
 		m_resultPartsUptrsUptr = unique_ptr<HtmlDocument::HtmlPartsUptrs>(new HtmlDocument::HtmlPartsUptrs);
 	};
 	virtual void text(const std::string& p_str, const long p_line, const long p_pos){
 		unique_ptr<HtmlPart> ptr(new TextHtmlParts(p_str, p_line, p_pos));
+=======
+		m_resultPartsUptrsUptr = unique_ptr<HtmlDocument::HtmlPartUptrs>(new HtmlDocument::HtmlPartUptrs);
+	};
+	virtual void text(const std::string& p_str, const long p_line, const long p_pos){
+		unique_ptr<HtmlPart> ptr(new TextHtmlPart(p_str, p_line, p_pos));
+>>>>>>> d257b57... ver.2.2
 		m_resultPartsUptrsUptr->push_back(move(ptr));
 	};
 	virtual void tag(const std::string& p_str, const long line, const long pos);
 	virtual void comment(const std::string& p_str, const long p_line, const long p_pos){
+<<<<<<< HEAD
 		unique_ptr<HtmlPart> ptr(new CommentHtmlParts(p_str, p_line, p_pos));
 		m_resultPartsUptrsUptr->push_back(move(ptr));
 	};
@@ -322,11 +390,26 @@ public:
 	}
 	//パースした結果を取得する。実行前か結果取得後はnullptrが返る。
 	unique_ptr<HtmlDocument::HtmlPartsUptrs> result(){
+=======
+		unique_ptr<HtmlPart> ptr(new CommentHtmlPart(p_str, p_line, p_pos));
+		m_resultPartsUptrsUptr->push_back(move(ptr));
+	};
+	virtual void notEnd(const std::string& p_str, const long p_line, const long p_pos){
+		unique_ptr<HtmlPart> ptr(new NotEndHtmlPart(p_str, p_line, p_pos));
+		m_resultPartsUptrsUptr->push_back(move(ptr));
+	}
+	//パースした結果を取得する。実行前か結果取得後はnullptrが返る。
+	unique_ptr<HtmlDocument::HtmlPartUptrs> result(){
+>>>>>>> d257b57... ver.2.2
 		return move(m_resultPartsUptrsUptr);
 	};
 
 private:
+<<<<<<< HEAD
 	unique_ptr<HtmlDocument::HtmlPartsUptrs> m_resultPartsUptrsUptr;
+=======
+	unique_ptr<HtmlDocument::HtmlPartUptrs> m_resultPartsUptrsUptr;
+>>>>>>> d257b57... ver.2.2
 };
 
 

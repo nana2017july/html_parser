@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HtmlParser: nana::HtmlSaxParserHandler クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HtmlParser
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="classnana_1_1_html_sax_parser_handler.html">HtmlSaxParserHandler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classnana_1_1_html_sax_parser_handler-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">nana::HtmlSaxParserHandler クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTMLパースをするためのハンドラ。使用する派生クラスで解析の仕方を変わる。  
+ <a href="classnana_1_1_html_sax_parser_handler.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="html__element_8hpp_source.html">html_element.hpp</a>&gt;</code></p>
+<div class="dynheader">
+nana::HtmlSaxParserHandler の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnana_1_1_html_sax_parser_handler.png" usemap="#nana::HtmlSaxParserHandler_map" alt=""/>
+  <map id="nana::HtmlSaxParserHandler_map" name="nana::HtmlSaxParserHandler_map">
+<area href="classnana_1_1noncopyable.html" title="コピーさせないために " alt="nana::noncopyable" shape="rect" coords="0,0,230,24"/>
+<area href="classnana_1_1_simple_html_sax_parser_handler.html" title="HTMLを解析し、タグ配列( HtmlPart の配列)を返すHTMLパーサハンドラ。 " alt="nana::SimpleHtmlSaxParserHandler" shape="rect" coords="0,112,230,136"/>
+<area href="classnana_1_1_document_html_sax_parser_handler.html" title="HTMLを解析し、 HtmlDocument を作成して返すHTMLパーサハンドラ。 " alt="nana::DocumentHtmlSaxParserHandler" shape="rect" coords="0,168,230,192"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a226ada4df5fc0024ad9a2cbf0ebaf98e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a226ada4df5fc0024ad9a2cbf0ebaf98e">HtmlSaxParserHandler</a> ()</td></tr>
+<tr class="separator:a226ada4df5fc0024ad9a2cbf0ebaf98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e924dd677ca862cbaa305aa86b22ea"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a46e924dd677ca862cbaa305aa86b22ea">~HtmlSaxParserHandler</a> ()</td></tr>
+<tr class="separator:a46e924dd677ca862cbaa305aa86b22ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82db01bc1acd29503bcbfa916b8b91e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#ae82db01bc1acd29503bcbfa916b8b91e">start</a> ()=0</td></tr>
+<tr class="memdesc:ae82db01bc1acd29503bcbfa916b8b91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始を知らせる。ハンドラの初期化用。  <a href="#ae82db01bc1acd29503bcbfa916b8b91e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae82db01bc1acd29503bcbfa916b8b91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbe8108e5a47f690d514006757af0ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a5fbe8108e5a47f690d514006757af0ff">text</a> (const std::string &amp;p_str, const long p_line, const long p_pos)=0</td></tr>
+<tr class="memdesc:a5fbe8108e5a47f690d514006757af0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストの場合にSaxから呼び出される。  <a href="#a5fbe8108e5a47f690d514006757af0ff">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fbe8108e5a47f690d514006757af0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a048e914734ce80b04e270822d0e091"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a8a048e914734ce80b04e270822d0e091">tag</a> (const std::string &amp;p_str, const long p_line, const long p_pos)=0</td></tr>
+<tr class="memdesc:a8a048e914734ce80b04e270822d0e091"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ（コメント以外の＜＞でくくられたもの）の場合にSaxから呼び出される。  <a href="#a8a048e914734ce80b04e270822d0e091">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a048e914734ce80b04e270822d0e091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6882f19a8ce1e19298cf553fe29db93d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a6882f19a8ce1e19298cf553fe29db93d">comment</a> (const std::string &amp;p_str, const long p_line, const long p_pos)=0</td></tr>
+<tr class="memdesc:a6882f19a8ce1e19298cf553fe29db93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コメント（＜！−−−−＞）の場合にSaxから呼び出される。  <a href="#a6882f19a8ce1e19298cf553fe29db93d">[詳解]</a><br /></td></tr>
+<tr class="separator:a6882f19a8ce1e19298cf553fe29db93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52678428630bb56676b1184e8c893f27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser_handler.html#a52678428630bb56676b1184e8c893f27">notEnd</a> (const std::string &amp;p_str, const long p_line, const long p_pos)=0</td></tr>
+<tr class="memdesc:a52678428630bb56676b1184e8c893f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグの終了（＞）がない場合にSaxから呼び出される。  <a href="#a52678428630bb56676b1184e8c893f27">[詳解]</a><br /></td></tr>
+<tr class="separator:a52678428630bb56676b1184e8c893f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>HTMLパースをするためのハンドラ。使用する派生クラスで解析の仕方を変わる。 </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a226ada4df5fc0024ad9a2cbf0ebaf98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226ada4df5fc0024ad9a2cbf0ebaf98e">&#9670;&nbsp;</a></span>HtmlSaxParserHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nana::HtmlSaxParserHandler::HtmlSaxParserHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46e924dd677ca862cbaa305aa86b22ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e924dd677ca862cbaa305aa86b22ea">&#9670;&nbsp;</a></span>~HtmlSaxParserHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nana::HtmlSaxParserHandler::~HtmlSaxParserHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a6882f19a8ce1e19298cf553fe29db93d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6882f19a8ce1e19298cf553fe29db93d">&#9670;&nbsp;</a></span>comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nana::HtmlSaxParserHandler::comment </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コメント（＜！−−−−＞）の場合にSaxから呼び出される。 </p>
+
+<p><a class="el" href="classnana_1_1_simple_html_sax_parser_handler.html#ad5e3182a0585ed3f0645dd024ec76032">nana::SimpleHtmlSaxParserHandler</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a52678428630bb56676b1184e8c893f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52678428630bb56676b1184e8c893f27">&#9670;&nbsp;</a></span>notEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nana::HtmlSaxParserHandler::notEnd </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タグの終了（＞）がない場合にSaxから呼び出される。 </p>
+
+<p><a class="el" href="classnana_1_1_simple_html_sax_parser_handler.html#a65eaaa03d318f311a73a0faa2f33df3c">nana::SimpleHtmlSaxParserHandler</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ae82db01bc1acd29503bcbfa916b8b91e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82db01bc1acd29503bcbfa916b8b91e">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nana::HtmlSaxParserHandler::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>開始を知らせる。ハンドラの初期化用。 </p>
+
+<p><a class="el" href="classnana_1_1_simple_html_sax_parser_handler.html#a7ea4e099bfb115afa5b737f36258cd0f">nana::SimpleHtmlSaxParserHandler</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a8a048e914734ce80b04e270822d0e091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a048e914734ce80b04e270822d0e091">&#9670;&nbsp;</a></span>tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nana::HtmlSaxParserHandler::tag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>タグ（コメント以外の＜＞でくくられたもの）の場合にSaxから呼び出される。 </p>
+
+<p><a class="el" href="classnana_1_1_simple_html_sax_parser_handler.html#adda304f14c7993ba17f489f8ef8ddf78">nana::SimpleHtmlSaxParserHandler</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5fbe8108e5a47f690d514006757af0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbe8108e5a47f690d514006757af0ff">&#9670;&nbsp;</a></span>text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nana::HtmlSaxParserHandler::text </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>p_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テキストの場合にSaxから呼び出される。 </p>
+
+<p><a class="el" href="classnana_1_1_simple_html_sax_parser_handler.html#af850c65c487edd85ece85c99a859757e">nana::SimpleHtmlSaxParserHandler</a>で実装されています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="html__element_8hpp_source.html">html_element.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

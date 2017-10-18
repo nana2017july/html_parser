@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['searchresults',['SearchResults',['../classnana_1_1_end_tag_accessor.html#a84dfacb7643957908cbaed27de896062',1,'nana::EndTagAccessor::SearchResults()'],['../classnana_1_1_deprecated_in_html5_accessor.html#a1c1bdcfe09f72dbaa200630e9101f5bf',1,'nana::DeprecatedInHtml5Accessor::SearchResults()'],['../classnana_1_1_img_alt_accessor.html#a670986095d7b0a2d59dd2ce73ff704ad',1,'nana::ImgAltAccessor::SearchResults()'],['../classnana_1_1_html_document.html#a7090e7b84565b0a16a7ecdcb94e60b9d',1,'nana::HtmlDocument::SearchResults()']]],
+  ['searchresultsuptr',['SearchResultsUptr',['../classnana_1_1_end_tag_accessor.html#a86f7cc1d7606f77a5aed88d735f37609',1,'nana::EndTagAccessor::SearchResultsUptr()'],['../classnana_1_1_deprecated_in_html5_accessor.html#a76217f86f9ce16f73dfe50e3a2c136d6',1,'nana::DeprecatedInHtml5Accessor::SearchResultsUptr()'],['../classnana_1_1_img_alt_accessor.html#a6a3933b012ad426dc2cd7602a34c2e20',1,'nana::ImgAltAccessor::SearchResultsUptr()'],['../classnana_1_1_html_document.html#a60f848f7f5d16ee0f826a62cddb664e4',1,'nana::HtmlDocument::SearchResultsUptr()']]]
+];

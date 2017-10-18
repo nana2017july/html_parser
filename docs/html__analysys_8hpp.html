@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HtmlParser: html_analysys.hpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HtmlParser
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ba108fd24ae2b17bf0d7a474efb6da04.html">vs</a></li><li class="navelem"><a class="el" href="dir_848996492109597ea98c5abf1ffdfd9b.html">ConsoleApplication1</a></li><li class="navelem"><a class="el" href="dir_0cc48e9eff5a08eed0f6400882f862be.html">ConsoleApplication1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">html_analysys.hpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &quot;<a class="el" href="html__element_8hpp_source.html">html_element.hpp</a>&quot;</code><br />
+</div>
+<p><a href="html__analysys_8hpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_document_html_sax_parser_handler.html">nana::DocumentHtmlSaxParserHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTMLを解析し、 <a class="el" href="classnana_1_1_html_document.html">HtmlDocument</a> を作成して返すHTMLパーサハンドラ。  <a href="classnana_1_1_document_html_sax_parser_handler.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_node_accessor.html">nana::HtmlNodeAccessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HtmlNodeにアクセスし、タグ等の検査をするアクセサの基底クラス  <a href="classnana_1_1_html_node_accessor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_node_visitor.html">nana::HtmlNodeVisitor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HtmlNodeを順番にすべて訪問するクラス。訪問した時に <a class="el" href="classnana_1_1_html_node_accessor.html" title="HtmlNodeにアクセスし、タグ等の検査をするアクセサの基底クラス ">HtmlNodeAccessor</a> を呼び出す。  <a href="classnana_1_1_html_node_visitor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_composite_accessor.html">nana::CompositeAccessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数のアクセスクラスを取りまとめて、ノードにアクセスできるアクセサクラス。  <a href="classnana_1_1_composite_accessor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_end_tag_accessor.html">nana::EndTagAccessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">閉じていないタグと、互い違いになっているタグの抽出をするアクセサクラス。  <a href="classnana_1_1_end_tag_accessor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_deprecated_in_html5_accessor.html">nana::DeprecatedInHtml5Accessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML5で禁止になったタグを抽出するアクセサクラス。  <a href="classnana_1_1_deprecated_in_html5_accessor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_img_alt_accessor.html">nana::ImgAltAccessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">imgタグにalt属性が存在しないタグを抽出するアクセサクラス。（アクセシビリティの観点では重要なチェック項目。）  <a href="classnana_1_1_img_alt_accessor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_html_path.html">nana::path::HtmlPath</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">XPathもどきを扱うための基底クラス。パス抽出の実行者の１つを表す。  <a href="classnana_1_1path_1_1_html_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_path_html_path.html">nana::path::PathHtmlPath</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグ名と属性の検索（1階層/tagの指定）。  <a href="classnana_1_1path_1_1_path_html_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_position_html_path.html">nana::path::PositionHtmlPath</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素番号（述語）の指定。イメージは、tagname[n]。  <a href="classnana_1_1path_1_1_position_html_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_attributes_html_path.html">nana::path::AttributesHtmlPath</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性（述語）指定。イメージは、tagname[="xxx"]  <a href="classnana_1_1path_1_1_attributes_html_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_descendants_html_path.html">nana::path::DescendantsHtmlPath</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">子孫のタグ（//Descendant or self）検索。イメージは、//tagname  <a href="classnana_1_1path_1_1_descendants_html_path.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1path_1_1_html_path_executor.html">nana::path::HtmlPathExecutor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Htmlパスの実行者。  <a href="classnana_1_1path_1_1_html_path_executor.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespacenana"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html">nana</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenana_1_1path"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana_1_1path.html">nana::path</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5dad5f0d9ca933a1d49d59c97b942cd4"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html#a5dad5f0d9ca933a1d49d59c97b942cd4">nana::forwardMatch</a> (const string &amp;p_targetStr, const string &amp;p_searchStr)</td></tr>
+<tr class="separator:a5dad5f0d9ca933a1d49d59c97b942cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71d776ef6e29a3ecffcad164aae1fa15"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html#a71d776ef6e29a3ecffcad164aae1fa15">nana::backwardMatch</a> (const string &amp;p_targetStr, const string &amp;p_searchStr)</td></tr>
+<tr class="separator:a71d776ef6e29a3ecffcad164aae1fa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0da58b8be16bef8b181ab9aa4909ec"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html#a8e0da58b8be16bef8b181ab9aa4909ec">nana::wildcardMatch</a> (const char *ptn, const char *str)</td></tr>
+<tr class="separator:a8e0da58b8be16bef8b181ab9aa4909ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577d1b3386bd9ec7a1f5781f50a0ad81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html#a577d1b3386bd9ec7a1f5781f50a0ad81">nana::analyzeHtmlNode</a> (HtmlNode &amp;p_ret, const HtmlDocument::HtmlPartUptrs &amp;p_allDocParts)</td></tr>
+<tr class="separator:a577d1b3386bd9ec7a1f5781f50a0ad81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846ac73b18e7678d5f32e756e2df3c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenana.html#a846ac73b18e7678d5f32e756e2df3c35">nana::analyzeHtmlNodeBySameTagMatch</a> (HtmlNode &amp;p_ret, const HtmlDocument::HtmlPartUptrs &amp;p_allDocParts)</td></tr>
+<tr class="separator:a846ac73b18e7678d5f32e756e2df3c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

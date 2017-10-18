@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HtmlParser: nana::HtmlSaxParser クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HtmlParser
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="classnana_1_1_html_sax_parser.html">HtmlSaxParser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="classnana_1_1_html_sax_parser-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">nana::HtmlSaxParser クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTMLパーサ。派生クラスは存在しない。使用するハンドラを変えることで解析方法を変えられる。  
+ <a href="classnana_1_1_html_sax_parser.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="html__element_8hpp_source.html">html_element.hpp</a>&gt;</code></p>
+<div class="dynheader">
+nana::HtmlSaxParser の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnana_1_1_html_sax_parser.png" usemap="#nana::HtmlSaxParser_map" alt=""/>
+  <map id="nana::HtmlSaxParser_map" name="nana::HtmlSaxParser_map">
+<area href="classnana_1_1noncopyable.html" title="コピーさせないために " alt="nana::noncopyable" shape="rect" coords="0,0,129,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a54a0eadacc7d91119cced6f7e7c10941"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser.html#a54a0eadacc7d91119cced6f7e7c10941">parse</a> (std::istream &amp;is, <a class="el" href="classnana_1_1_html_sax_parser_handler.html">HtmlSaxParserHandler</a> &amp;handler)</td></tr>
+<tr class="separator:a54a0eadacc7d91119cced6f7e7c10941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a50448ae8f5c4c89f879311befdf1023e"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser.html#a50448ae8f5c4c89f879311befdf1023e">copyUntilFind</a> (string &amp;p_str, istream &amp;p_is, const char p_targetC)</td></tr>
+<tr class="separator:a50448ae8f5c4c89f879311befdf1023e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f51453df14e140c153803b35197f73f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser.html#a5f51453df14e140c153803b35197f73f">copyUntilFindCommentClosed</a> (string &amp;p_str, istream &amp;p_is)</td></tr>
+<tr class="separator:a5f51453df14e140c153803b35197f73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc09602ab5a66fa2904e82c830055ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnana_1_1_html_sax_parser.html#abc09602ab5a66fa2904e82c830055ef0">clearStr</a> (string &amp;str, long &amp;line, long &amp;pos)</td></tr>
+<tr class="separator:abc09602ab5a66fa2904e82c830055ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>HTMLパーサ。派生クラスは存在しない。使用するハンドラを変えることで解析方法を変えられる。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="abc09602ab5a66fa2904e82c830055ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc09602ab5a66fa2904e82c830055ef0">&#9670;&nbsp;</a></span>clearStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nana::HtmlSaxParser::clearStr </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50448ae8f5c4c89f879311befdf1023e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50448ae8f5c4c89f879311befdf1023e">&#9670;&nbsp;</a></span>copyUntilFind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool nana::HtmlSaxParser::copyUntilFind </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>p_is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>p_targetC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f51453df14e140c153803b35197f73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f51453df14e140c153803b35197f73f">&#9670;&nbsp;</a></span>copyUntilFindCommentClosed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool nana::HtmlSaxParser::copyUntilFindCommentClosed </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>p_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>p_is</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a0eadacc7d91119cced6f7e7c10941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a0eadacc7d91119cced6f7e7c10941">&#9670;&nbsp;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nana::HtmlSaxParser::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnana_1_1_html_sax_parser_handler.html">HtmlSaxParserHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="html__element_8hpp_source.html">html_element.hpp</a></li>
+<li><a class="el" href="html__element_8cpp.html">html_element.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
