@@ -30,6 +30,39 @@ using namespace std;
 using namespace nana::test;
 
 
+TEST_FUNC(test_TagHtmlPart_parseTag){
+	{
+		nana::TagHtmlPart htmlPart("<input hhh>", 1, 1);
+		A_TRUE(htmlPart.hasAttr("hhh", 0), "値なし");
+	}
+	{
+		nana::TagHtmlPart htmlPart("<input hhh=111>", 1, 1);
+		A_EQUALS(htmlPart.attr("hhh", 0), "111", "クォートなし");
+	}
+	{
+		nana::TagHtmlPart htmlPart("<input hhh 111>", 1, 1);
+		A_TRUE(htmlPart.hasAttr("hhh", 0), "値なし");
+		A_TRUE(htmlPart.hasAttr("111", 0), "値なし");
+	}
+	{
+		nana::TagHtmlPart htmlPart("<input hhh 111/>", 1, 1);
+		A_TRUE(htmlPart.hasAttr("hhh", 0), "値なし");
+		A_TRUE(htmlPart.hasAttr("111", 0), "値なし");
+	}
+	{
+		nana::TagHtmlPart htmlPart("<input hhh  111  >", 1, 1);
+		A_TRUE(htmlPart.hasAttr("hhh", 0), "値なし");
+		A_TRUE(htmlPart.hasAttr("111", 0), "値なし");
+	}
+	{
+		nana::TagHtmlPart htmlPart("<input>", 1, 1);
+		A_EQUALS(htmlPart.attrNames()->size(), 0, "属性なし");
+	}
+
+
+}
+	
+
 TEST_FUNC(test_SimpleHtmlSaxParserHandler1){
 	string str(" <!Doctype afdafa><tAg aA='xX'> <!--d/--></tag><tes2/><not gg='");
 

@@ -168,7 +168,7 @@ void TagHtmlPart::parseTag(){
 	enum Status { TAG, NONE, ATTR_KEY, ATTR_VAL };
 	enum Status s = TAG;
 	static const string notTag(" \n\t=>/");
-	static const string notKey(" \n\t=");
+	static const string notKey(" \n\t=>/");
 	string::const_iterator end = str().end();
 	string::const_iterator p;
 	string key, val;
@@ -187,8 +187,8 @@ void TagHtmlPart::parseTag(){
 			//空白ではない文字まで位置を進める 
 			i = find_if(i, end, IsNotSpace);
 			s = NONE;
-			//属性の開始の場合 
-			if(*i != '>'){
+			//属性の開始の場合
+			if(*i != '>' && *i != '/'){
 				s = ATTR_KEY;
 				--i;
 			}
@@ -202,12 +202,19 @@ void TagHtmlPart::parseTag(){
 			toLowerCaseStr(key);
 			//空白ではない文字まで位置を進める 
 			i = find_if(i, end, IsNotSpace);
+			//エンドの場合はキーのみ
+			if(i == end || *i == '>' || *i == '/'){
+				m_attrMap[key].push_back("");
+				s = NONE;
+				--i;
+				break;
+			}
 			//イコールがあるかをチェック
 			if(i != end && *i == '='){
 				s = ATTR_VAL;
 				++i;
 				//空白ではない文字まで位置を進める 
-				i = find_if(i, end, IsNotSpace);;
+				i = find_if(i, end, IsNotSpace);
 			} else{
 				//キーのみの場合
 				m_attrMap[key].push_back("");
@@ -227,6 +234,10 @@ void TagHtmlPart::parseTag(){
 				//'の位置まで進める
 				i = find(i, end, '\'');
 				val = string(++p, i);
+			} else {
+				//クォートなし。属性値ではないところまで進める
+				i = find_first_of(i, end, notKey.begin(), notKey.end());
+				val = string(p, i);
 			}
 			if(i == end) --i;
 			//
@@ -285,7 +296,7 @@ const bool HtmlSaxParser::copyUntilFindCommentClosed(string& p_str, istream& p_i
 	while(true){
 		copyUntilFind(p_str, p_is, '>');
 		if(strncmp(p_str.data() + p_str.size() - 3, "-->", 3) == 0) return true;
-		if(p_is) return false;
+		if(!p_is) return false;
 	}
 	return false;
 }

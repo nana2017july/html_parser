@@ -21,8 +21,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <iostream>
-#include <stdexcept> 
-#include <boost/utility.hpp>
+#include <stdexcept>
 
 
 #include "html_analysys.hpp"
@@ -37,8 +36,6 @@ using std::istream;
 using std::unique_ptr;
 using std::cout;
 using std::endl;
-
-using boost::noncopyable;
 
 
 

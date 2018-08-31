@@ -348,4 +348,33 @@ TEST_FUNC(test_CompositeAccessor1){
 };
 
 
+/**
+HtmlSaxParser::copyUntilFindCommentClosedのバグ修正のテスト
+コメントが開始した後、閉じタグが2つ続くとコメントの終了を認識できないバグ。
+*/
+TEST_FUNC(test_copyUntilFindCommentClosed){
+	string str("<html><!--<form name='f'><input name='1'><--><blink></blink><input name='2'></html>");
+
+	nana::HtmlSaxParser parser;
+	nana::DocumentHtmlSaxParserHandler handler;
+	istringstream is(str);
+	parser.parse(is, handler);
+	unique_ptr<nana::HtmlDocument> docUptr = handler.result();
+
+	//
+	nana::EndTagAccessor acc;
+	nana::HtmlNodeVisitor vis;
+
+	//チェック実行
+	vis.access(docUptr->rootNode(), acc);
+
+	//結果取得(結果の型は unique_ptr<vector<const HtmlNode*>>)
+	auto nonClosedUptr = acc.nonClosedResult();
+	auto alternatedUptr = acc.alternatedResult();
+	//
+	A_EQUALS(nonClosedUptr->size(), 0, "抽出数");
+	A_EQUALS(alternatedUptr->size(), 0, "抽出数");
+};
+
+
 } //namespace
