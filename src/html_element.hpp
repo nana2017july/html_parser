@@ -61,7 +61,7 @@ protected:
 	~noncopyable(){};
 private:  // emphasize the following members are private
 	noncopyable(const noncopyable&);
-	noncopyable& operator=(const noncopyable&){};
+	noncopyable& operator=(const noncopyable&){ return *this; };
 };
 
 
@@ -98,7 +98,7 @@ public:
 	///タグ全体の文字列 
 	virtual const std::string& str() const{ return m_contentStr; };
 	///属性を取得する（見つからない場合、タイプがタグでない場合は空文字を返す） 
-	virtual const std::string& attr(const std::string& p_key, const int p_index) const{
+	virtual const std::string& attr(const std::string& p_key, const std::size_t p_index) const{
 		static const std::string strNull("");
 		return strNull;
 	};
@@ -206,9 +206,9 @@ public:
 	const HtmlNode& rootNode()const{ return *m_rootNodeUptr; };
 	
 	///要素の数
-	const HtmlPartUptrs::size_type size()const{ return m_stockedPartUptrsUptr->size(); };
+	const std::size_t size()const{ return m_stockedPartUptrsUptr->size(); };
 	///位置を指定してタグを取得する(見つからない場合nullptr)
-	const HtmlPart* at(const int p_index)const{
+	const HtmlPart* at(const std::size_t p_index)const{
 		if(p_index < m_stockedPartUptrsUptr->size()) return (*m_stockedPartUptrsUptr)[p_index].get();
 		return nullptr;
 	};
@@ -233,10 +233,10 @@ public:
 	virtual ~TagHtmlPart(){};
 	virtual const HtmlPart::Type type() const{ return TAG; };
 	virtual const string& tagName()const{ return m_tagName; };
-	virtual const std::string& attr(const std::string& p_key, const int p_index)const;
-	virtual const bool hasAttr(const string& p_key, const int p_index)const;
+	virtual const std::string& attr(const std::string& p_key, const std::size_t p_index)const;
+	virtual const bool hasAttr(const std::string& p_key, const std::size_t p_index)const;
 	///属性名の一覧
-	virtual std::unique_ptr<vector<const string*>> attrNames()const;
+	virtual std::unique_ptr<vector<const std::string*>> attrNames()const;
 protected:
 	void parseTag();
 private:

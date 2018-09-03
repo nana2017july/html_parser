@@ -63,8 +63,9 @@ const std::string& HtmlPart::typeStr() const{
 		return comStr;
 	case HtmlPart::DECLARATION:
 		return docStr;
+	default:
+		return hateStr;
 	}
-	return hateStr;
 };
 
 
@@ -136,7 +137,7 @@ static void toLowerCaseStr(string& p_str){
 	transform(p_str.begin(), p_str.end(), p_str.begin(), ::tolower);
 }
 
-const std::string& TagHtmlPart::attr(const std::string& p_key, const int p_index)const{
+const std::string& TagHtmlPart::attr(const std::string& p_key, const std::size_t p_index)const{
 	static const string strNull("");
 	AttrMap::const_iterator i = m_attrMap.find(p_key);
 	if(i != m_attrMap.end()){
@@ -146,7 +147,7 @@ const std::string& TagHtmlPart::attr(const std::string& p_key, const int p_index
 	return strNull;
 };
 
-const bool TagHtmlPart::hasAttr(const string& p_key, const int p_index)const{
+const bool TagHtmlPart::hasAttr(const std::string& p_key, const std::size_t p_index)const{
 	auto i = m_attrMap.find(p_key);
 	if(i != m_attrMap.end()){
 		if(p_index < (i->second).size()) return true;
@@ -156,8 +157,8 @@ const bool TagHtmlPart::hasAttr(const string& p_key, const int p_index)const{
 };
 
 ///‘®«–¼‚Ìˆê——
-std::unique_ptr<vector<const string*>> TagHtmlPart::attrNames()const{
-	unique_ptr<vector<const string*>> keyVecUptr(new vector<const string*>);
+std::unique_ptr<vector<const std::string*>> TagHtmlPart::attrNames()const{
+	unique_ptr<vector<const std::string*>> keyVecUptr(new vector<const std::string*>);
 	for(auto i = m_attrMap.begin(); i != m_attrMap.end(); ++i) keyVecUptr->push_back(&(i->first));
 	return move(keyVecUptr);
 

@@ -32,6 +32,7 @@ https://nana2017july.github.io/html_parser/index.html<br>
 ## 変更履歴
 ver.2.2 新規作成<br>
 ver.2.3 不具合修正。ドキュメントの変更なし。<br>
+ver.2.4 centos7 g++(4.8.5)でコンパイルが通るようにした。g++用makefile追加。<br>
 
 
 ## 動作環境
@@ -39,6 +40,7 @@ ver.2.3 不具合修正。ドキュメントの変更なし。<br>
 以下のコンパイル環境で使用できることを条件にしました。<br>
 * Dev-C++（もうオワコン？）
 * Microsoft Visual Studio C++ 2017 
+* CentOS7 g++(4.8.5)
 
 【言語】<br>
 * C++11

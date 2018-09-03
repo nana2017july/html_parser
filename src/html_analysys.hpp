@@ -286,11 +286,11 @@ namespace path{
 	*/
 	class PositionHtmlPath :public HtmlPath{
 	public:
-		PositionHtmlPath(const int p_pos): m_position(p_pos){};
+		PositionHtmlPath(const std::size_t p_pos): m_position(p_pos){};
 		///
 		virtual unique_ptr<HtmlNodePtrs> filter(HtmlNodePtrs& p_nodePVec);
 	private:
-		int m_position;
+		std::size_t m_position;
 	};
 
 	/**
