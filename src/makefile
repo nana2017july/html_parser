@@ -2,7 +2,7 @@
 #
 OBJS    = html_element.o html_analysys.o test/assert.o test_main.o
 CXX     = g++
-CXXFLAGS  = -Wall $(DEBUG) -std=c++11 -pthread
+CXXFLAGS  = -Wall $(DEBUG) -std=c++11
 
 test_main: $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o test_main
